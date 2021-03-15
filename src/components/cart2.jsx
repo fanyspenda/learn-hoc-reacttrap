@@ -1,4 +1,5 @@
 import React from "react";
+import { withCounter } from "../hoc/withCounter";
 
 class Cart2 extends React.Component {
 	render() {
@@ -10,4 +11,4 @@ class Cart2 extends React.Component {
 	}
 }
 
-export default Cart2;
+export default withCounter(Cart2);

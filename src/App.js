@@ -7,8 +7,8 @@ import Cart2 from "./components/cart2";
 
 class App extends React.Component {
 	render() {
-		const NewCart1 = withCounter(Cart1);
-		const NewCart2 = withCounter(Cart2);
+		// const NewCart1 = withCounter(Cart1);
+		// const NewCart2 = withCounter(Cart2);
 		return (
 			<div className="App">
 				<Router>
@@ -16,8 +16,8 @@ class App extends React.Component {
 					<Link to="/cart2">go to Cart 2</Link>
 
 					<Switch>
-						<Route path="/cart1" component={NewCart1} />
-						<Route path="/cart2" component={NewCart2} />
+						<Route path="/cart1" component={Cart1} />
+						<Route path="/cart2" component={Cart2} />
 					</Switch>
 				</Router>
 			</div>
