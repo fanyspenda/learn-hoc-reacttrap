@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, BrowserRouter as Router, Link, Switch } from "react-router-dom";
+import { withCounter } from "./hoc/withCounter";
+import Cart1 from "./components/cart1";
+import Cart2 from "./components/cart2";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	render() {
+		const NewCart1 = withCounter(Cart1);
+		const NewCart2 = withCounter(Cart2);
+		return (
+			<div className="App">
+				<Router>
+					<Link to="/cart1">go to Cart 1</Link>
+					<Link to="/cart2">go to Cart 2</Link>
+
+					<Switch>
+						<Route path="/cart1" component={NewCart1} />
+						<Route path="/cart2" component={NewCart2} />
+					</Switch>
+				</Router>
+			</div>
+		);
+	}
 }
 
 export default App;
