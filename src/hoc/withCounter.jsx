@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "reactstrap";
 
 export const withCounter = (Component) => {
 	return class extends React.Component {
@@ -18,7 +19,7 @@ export const withCounter = (Component) => {
 			return (
 				<div>
 					<Component />
-					<button onClick={() => handleClick()}>Add</button>
+					<Button onClick={() => handleClick()}>Add</Button>
 					<p>{this.state.count}</p>
 				</div>
 			);
