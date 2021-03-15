@@ -1,4 +1,6 @@
-# HOC
+# HOC dan Reactstrap
+
+## HOC (Higher-Order Component)
 
 > **catatan belajar HOC**
 >
@@ -7,6 +9,11 @@
 
 HOC merupakan cara React untuk me-_reuse_ logic yang sama di beberapa komponen.
 
-cara adalah dengan membuat fungsi yang menerima parameter komponen dan mereturn komponen baru.
+caranya adalah dengan membuat fungsi yang menerima parameter komponen dan mereturn komponen baru.
 
 konsepnya mirip dengan _higher-order function_.
+
+## Reactstrap
+
+1. Konsep grid, nilai maximalnya adalah 12.
+2. `Accordion` tidak bisa diimpor dari library `reactstrap`
